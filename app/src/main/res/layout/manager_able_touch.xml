@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <ImageButton
+        android:id="@+id/img_able_touch"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/eye_appear">
+    </ImageButton>
+</RelativeLayout>

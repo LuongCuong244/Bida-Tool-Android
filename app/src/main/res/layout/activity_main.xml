@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_title"
+        android:text="Công cụ hỗ trợ chơi các game Bi-da"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="#0d324d"
+        android:letterSpacing="0.05"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="70dp"
+            android:background="@drawable/custom_button_start"
+            android:id="@+id/btnStart"
+            android:textSize="25dp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:letterSpacing="0.01"
+            android:text="Khởi động"/>
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="70dp"
+            android:background="@drawable/custom_button_stop"
+            android:textSize="25dp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:letterSpacing="0.01"
+            android:layout_marginTop="20dp"
+            android:text="Dừng lại"/>
+
+        <Button
+            android:id="@+id/btnSetting"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="70dp"
+            android:background="@drawable/custom_button_setting"
+            android:textSize="25dp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:letterSpacing="0.01"
+            android:layout_marginTop="60dp"
+            android:text="Cài đặt"/>
+    </LinearLayout>
+
+</LinearLayout>

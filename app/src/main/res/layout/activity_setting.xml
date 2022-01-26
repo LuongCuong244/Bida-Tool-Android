@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#ff6600"
+        android:id="@+id/space1"/>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/space1"
+        android:src="@drawable/img" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#ff6600"
+        android:layout_below="@id/img"
+        android:id="@+id/space2"/>
+    
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_below="@id/space2"
+        android:layout_height="320dp"
+        android:background="@drawable/background_scroll_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+// khu 1
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="5dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:background="@drawable/background_title_scrollview"
+                android:text="Thay đổi ở khu số 1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:paddingHorizontal="45dp"
+                android:text="Thay đổi kích thước của nút bấm ( con mắt )"/>
+
+            <EditText
+                android:id="@+id/edt_eye_size"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="40dp"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:background="@drawable/background_edit_text"
+                android:layout_marginTop="3dp"/>
+// khu 2
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="5dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:background="@drawable/background_title_scrollview"
+                android:text="Thay đổi ở khu số 2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:paddingHorizontal="45dp"
+                android:text="Thay đổi bán kính của các nút bấm ( 11 nút )"/>
+
+            <EditText
+                android:id="@+id/edt_icons_size"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="40dp"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:background="@drawable/background_edit_text"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:paddingHorizontal="45dp"
+                android:text="Thay đổi khoảng cách giữa các nút bấm"/>
+
+            <EditText
+                android:id="@+id/edt_icons_space"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="40dp"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:background="@drawable/background_edit_text"
+                android:layout_marginTop="3dp"/>
+
+// khu 3
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="5dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:background="@drawable/background_title_scrollview"
+                android:text="Thay đổi ở khu số 3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:paddingHorizontal="45dp"
+                android:text="Thay đổi bán kính của vòng tròn ngoài ( vòng tròn dùng để di chuyển )"/>
+
+            <EditText
+                android:id="@+id/edt_circle_touch_radius"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="40dp"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:background="@drawable/background_edit_text"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:paddingHorizontal="45dp"
+                android:text="Thay đổi bán kính của vòng tròn trong ( kích thước của 1 viên bi )"/>
+
+            <EditText
+                android:id="@+id/edt_circle_ball_radius"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="40dp"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:background="@drawable/background_edit_text"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:paddingHorizontal="45dp"
+                android:text="Thay đổi kích thước viền của vòng tròn trong ( độ dày )"/>
+
+            <EditText
+                android:id="@+id/edt_border_ball"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="40dp"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:background="@drawable/background_edit_text"
+                android:layout_marginTop="3dp"/>
+// khu 4
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="5dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:background="@drawable/background_title_scrollview"
+                android:text="Thay đổi ở khu số 4"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:paddingHorizontal="45dp"
+                android:text="Thay đổi bán kính của nút di chuyển"/>
+
+            <EditText
+                android:id="@+id/edt_move_scale_radius"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="40dp"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:background="@drawable/background_edit_text"
+                android:layout_marginTop="3dp"/>
+// khu 5
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="5dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:background="@drawable/background_title_scrollview"
+                android:text="Thay đổi ở khu số 5"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:paddingHorizontal="45dp"
+                android:text="Thay đổi kích thước đường viền bàn ( độ dày )"/>
+
+            <EditText
+                android:id="@+id/edt_border_width"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="40dp"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:background="@drawable/background_edit_text"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:paddingHorizontal="45dp"
+                android:text="Thay đổi kích thước đường đi của bóng ( độ dày )"/>
+
+            <EditText
+                android:id="@+id/edt_line_width"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="40dp"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:background="@drawable/background_edit_text"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:text="ADMIN: Nếu thấy thiếu chỗ nào thì mọi người vào đánh giá app và ghi phần còn thiếu giùm mình. Mình sẽ đọc, tiếp thu và cập nhật ở lần update kế tiếp. Cảm ơn !!!"
+                android:paddingHorizontal= "20dp"
+                android:paddingVertical="10dp"
+                android:textStyle="italic"
+                android:background="#56a1e1"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/scroll_view"
+        android:background="#ff6600"
+        android:id="@+id/space3"/>
+    
+    <Button
+        android:id="@+id/btn_Update"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="70dp"
+        android:layout_below="@id/space3"
+        android:background="@drawable/custom_button_update"
+        android:text="Cập nhật"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"/>
+</RelativeLayout>
