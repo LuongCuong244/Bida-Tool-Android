@@ -18,8 +18,8 @@ public class DrawFeature {
     public static ArrayList<Point> listPointTwoShootLine = new ArrayList<>();
     public static int direction = 1;
 
-    public static int saiSoCanBang = 0 /*Properties.ball_Radius*/;
-    public static int customSaiSo = 70;
+    public static int saiSoCanBang = Properties.ball_Radius;
+    public static int customSaiSo = Properties.ball_Radius*7;
 
     public void setValueOfListTwoLine(){
 

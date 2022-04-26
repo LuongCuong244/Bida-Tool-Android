@@ -114,7 +114,10 @@ public class GameFrame extends Service {
     }
 
     public static void setRadiusOfIcons(){
-        Log.d("aaa",Properties.iconsRadius + " radus");
+
+        if(hole_one == null){
+            return;
+        }
 
         LinearLayout.LayoutParams parms = new LinearLayout.LayoutParams(Properties.iconsRadius*2,Properties.iconsRadius*2);
         parms.leftMargin = Properties.iconsSpace;
@@ -130,10 +133,9 @@ public class GameFrame extends Service {
         option_three.setLayoutParams(parms);
         option_four.setLayoutParams(parms);
         option_five.setLayoutParams(parms);
+        parms = new LinearLayout.LayoutParams(40,Properties.iconsRadius*2);
         liLBarOne.setLayoutParams(parms);
         liLBarTwo.setLayoutParams(parms);
-        parms = new LinearLayout.LayoutParams(widthScreen,Properties.iconsRadius*2 + 10);
-        liLViewFrame.setLayoutParams(parms);
     }
 
     private void onClickHole_One(){

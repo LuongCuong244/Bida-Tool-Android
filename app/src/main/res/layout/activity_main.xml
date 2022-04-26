@@ -24,7 +24,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="vertical"
         android:gravity="center">
 
@@ -63,8 +64,32 @@
             android:textAllCaps="false"
             android:textStyle="bold"
             android:letterSpacing="0.01"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="20dp"
             android:text="Cài đặt"/>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGetPCVersion"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/custom_button_getpcversion"
+        android:textColor="#d63b72"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:letterSpacing="0.01"
+        android:layout_marginVertical="30dp"
+        android:text="Nhận bản game dành cho máy tính"/>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
 
 </LinearLayout>

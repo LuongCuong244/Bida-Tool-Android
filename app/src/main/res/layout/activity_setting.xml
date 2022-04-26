@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background_gradient"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -22,16 +22,17 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="#ff6600"
+        android:layout_height="10dp"
+        android:background="#000000"
         android:layout_below="@id/img"
         android:id="@+id/space2"/>
-    
+
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_below="@id/space2"
-        android:layout_height="320dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:background="@drawable/background_scroll_view">
 
         <LinearLayout
@@ -247,7 +248,7 @@
                 android:textStyle="italic"
                 android:textSize="15dp"
                 android:paddingHorizontal="45dp"
-                android:text="Thay đổi bán kính của nút di chuyển"/>
+                android:text="Thay đổi đường kính của nút di chuyển"/>
 
             <EditText
                 android:id="@+id/edt_move_scale_radius"
@@ -325,18 +326,6 @@
                 android:background="@drawable/background_edit_text"
                 android:layout_marginTop="3dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="20dp"
-                android:text="ADMIN: Nếu thấy thiếu chỗ nào thì mọi người vào đánh giá app và ghi phần còn thiếu giùm mình. Mình sẽ đọc, tiếp thu và cập nhật ở lần update kế tiếp. Cảm ơn !!!"
-                android:paddingHorizontal= "20dp"
-                android:paddingVertical="10dp"
-                android:textStyle="italic"
-                android:background="#56a1e1"
-                android:textColor="@color/black"
-                android:textSize="20dp"/>
-
         </LinearLayout>
     </ScrollView>
 
@@ -346,7 +335,7 @@
         android:layout_below="@id/scroll_view"
         android:background="#ff6600"
         android:id="@+id/space3"/>
-    
+
     <Button
         android:id="@+id/btn_Update"
         android:layout_width="match_parent"
@@ -358,5 +347,6 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:layout_marginTop="20dp"/>
-</RelativeLayout>
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"/>
+</LinearLayout>

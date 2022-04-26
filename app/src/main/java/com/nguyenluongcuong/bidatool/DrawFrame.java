@@ -21,9 +21,11 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
+import com.nguyenluongcuong.bidatool.Activity.MainActivity;
+
 public class DrawFrame extends View {
 
-    private Bitmap moveButton, scaleButton;
+    public static Bitmap moveButton, scaleButton;
 
     private float initialX;
     private float initialY;
@@ -36,6 +38,7 @@ public class DrawFrame extends View {
     private boolean movingSelectedBallButton = false;
 
     private DrawFeature drawFeature;
+    private static Bitmap moveBitmap, scaleBitmap;
 
     public DrawFrame(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -43,9 +46,17 @@ public class DrawFrame extends View {
         Properties.setPaint();
 
         drawFeature = new DrawFeature();
-        Bitmap moveBitmap= BitmapFactory.decodeResource(getResources(), R.drawable.move_icon);
+        moveBitmap= BitmapFactory.decodeResource(getResources(), R.drawable.move_icon);
+        scaleBitmap= BitmapFactory.decodeResource(getResources(), R.drawable.scale_icon);
         moveButton = Bitmap.createScaledBitmap(moveBitmap,Properties.sizeButton,Properties.sizeButton,false);
-        Bitmap scaleBitmap= BitmapFactory.decodeResource(getResources(), R.drawable.scale_icon);
+        scaleButton = Bitmap.createScaledBitmap(scaleBitmap,Properties.sizeButton,Properties.sizeButton,false);
+    }
+
+    public static void resetBitmap(){
+        if(moveButton == null){
+            return;
+        }
+        moveButton = Bitmap.createScaledBitmap(moveBitmap,Properties.sizeButton,Properties.sizeButton,false);
         scaleButton = Bitmap.createScaledBitmap(scaleBitmap,Properties.sizeButton,Properties.sizeButton,false);
     }
 
@@ -54,7 +65,7 @@ public class DrawFrame extends View {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         setMeasuredDimension(this.getMeasuredWidth(), this.getMeasuredHeight());
 
-        if(ManagerAbleTouch.readDataSuccessfully || ListPoint.pBorderStart.x != 0){
+        if(MainActivity.readDataSuccessfully || ListPoint.pBorderStart.x != 0){
             drawFeature.setValueOfListTwoLine();
             invalidate();
             return;
@@ -171,7 +182,6 @@ public class DrawFrame extends View {
                     ListPoint.pBorderStart.set(borderStartX_Unchecked, borderStartY_Unchecked);
                     Properties.widthFrame = ListPoint.pBorderEnd.x - ListPoint.pBorderStart.x;
                     Properties.heightFrame = ListPoint.pBorderEnd.y - ListPoint.pBorderStart.y;
-                    Properties.ball_Radius = Properties.heightFrame / 35;
                     drawFeature.setValueOfListTwoLine();
 
                     if(ListPoint.pSelected.x > Properties.widthFrame - Properties.ball_Radius){
@@ -266,6 +276,13 @@ public class DrawFrame extends View {
             }
             invalidate();
             return true;
+        }
+        if(ManagerAbleTouch.ableTouch && ManagerAbleTouch.img_able_touch != null){
+            ManagerAbleTouch.img_able_touch.setImageResource(R.drawable.eye_hide);
+            GameFrame.params.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE;
+            ManagerAbleTouch.ableTouch = false;
+            GameFrame.liLViewFrame.setVisibility(View.GONE);
+            GameFrame.windowManager.updateViewLayout(GameFrame.viewFrame,GameFrame.params);
         }
         return true;
     }

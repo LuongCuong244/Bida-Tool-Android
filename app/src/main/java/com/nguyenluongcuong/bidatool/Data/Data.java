@@ -3,12 +3,14 @@ package com.nguyenluongcuong.bidatool.Data;
 import android.content.SharedPreferences;
 import android.util.Log;
 
+import com.nguyenluongcuong.bidatool.DrawFeature;
 import com.nguyenluongcuong.bidatool.ListPoint;
 import com.nguyenluongcuong.bidatool.Properties;
 
 public class Data {
 
     public static void saveData(SharedPreferences sharedPreferences){
+        Log.d("aaa","luu data");
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("widthFrame", Properties.widthFrame);
         editor.putInt("heightFrame", Properties.heightFrame);
@@ -40,6 +42,8 @@ public class Data {
 
     public static boolean getData(SharedPreferences sharedPreferences){
 
+        Log.d("aaa","doc data");
+
         Properties.widthFrame = sharedPreferences.getInt("widthFrame",0);
         if(Properties.widthFrame == 0){ // chưa được lưu bao giờ
             return false;
@@ -49,6 +53,8 @@ public class Data {
         Properties.sizeButton = sharedPreferences.getInt("sizeButton",80);
         Properties.eyeRadius = sharedPreferences.getInt("eyeRadius",200);
         Properties.ball_Radius = sharedPreferences.getInt("ball_Radius",30);
+        DrawFeature.saiSoCanBang = Properties.ball_Radius;
+        DrawFeature.customSaiSo = Properties.ball_Radius*7;
         Properties.iconsRadius = sharedPreferences.getInt("iconsRadius",13);
         Properties.iconsSpace = sharedPreferences.getInt("iconsSpace",10);
         Properties.radius_pSelected = sharedPreferences.getInt("radius_pSelected",80);
